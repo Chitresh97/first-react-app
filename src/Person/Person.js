@@ -3,9 +3,16 @@ import React from 'react'
 //No need to import component because we are not creating class that inherits component class.
 
 //Component is basically a function returning JSX
-const person=()=>{
-    return <p>I'm a person, I am {Math.floor(Math.random()*30)}.</p>
-    //content inside {} is executed as JS. It is used to run dynamic content inJSX.
+const person=(props)=>{
+    //one argument is passed by default which is an object containg all properties(attributes of component)
+    return (
+    <div>
+        <p>My name is {props.name}, I am {props.age} years old.</p>
+        {/* Children property- elements between opening and closing tag of component*/}
+        <p>{props.children}</p> 
+    </div>
+    )
+    //content inside {} is executed as JS. It is used to run dynamic content in JSX.
 };
 
 export default person;

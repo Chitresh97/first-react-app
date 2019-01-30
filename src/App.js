@@ -9,9 +9,10 @@ class App extends Component {
       <div className="App">
         <h1>Hello</h1>
         {/* Using the person component, self closing tag */}
-        <Person/>
-        <Person/>
-        <Person/>
+        <Person name="Max" age="29"/>
+        {/* Children property- elements between opening and closing tag of component */}
+        <Person name="Chitresh" age="21">My hobbies- procrastination</Person>
+        <Person name="conman" age="0"/>
       </div>
     );
   }

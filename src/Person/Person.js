@@ -4,7 +4,8 @@ import React from 'react'
 
 //Component is basically a function returning JSX
 const person=()=>{
-    return <p>I'm a person.</p>
-}
+    return <p>I'm a person, I am {Math.floor(Math.random()*30)}.</p>
+    //content inside {} is executed as JS. It is used to run dynamic content inJSX.
+};
 
 export default person;

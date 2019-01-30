@@ -10,6 +10,8 @@ class App extends Component {
         <h1>Hello</h1>
         {/* Using the person component, self closing tag */}
         <Person/>
+        <Person/>
+        <Person/>
       </div>
     );
   }

@@ -18,7 +18,15 @@ class App extends Component {
   }
   //handler is used in name of function to indicate it's a event handler. It is just a convention.
   switchnameHandler=()=>{
-    console.log("clicked");
+    //this keyword can only be used when we use this syntax for function.
+    // Special method provided by component class(react library)-
+    this.setState({
+      persons: [
+        {name:'Maximilian', age:28},
+        {name:'Chitresh', age:101},
+        {name:'conman', age:56},
+      ]
+    })
   }
   render() {
     return (

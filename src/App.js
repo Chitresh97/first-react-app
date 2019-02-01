@@ -16,10 +16,16 @@ class App extends Component {
     ]
 
   }
+  //handler is used in name of function to indicate it's a event handler. It is just a convention.
+  switchnameHandler=()=>{
+    console.log("clicked");
+  }
   render() {
     return (
       <div className="App">
         <h1>Hello</h1>
+        {/* don;t add brackets in function call otherwise it'll be called as soon as DOM is rendered */}
+        <button onClick={this.switchnameHandler}>Click here</button>
         {/* Using the person component, self closing tag */}
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
         {/* Children property- elements between opening and closing tag of component */}

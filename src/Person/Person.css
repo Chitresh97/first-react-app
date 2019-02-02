@@ -1,0 +1,12 @@
+/* This is a global css code so use classes */
+
+.Person{
+    text-align: center;
+    border: 1px solid #bd5858;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(211, 81, 81);
+    font-family: sans-serif;
+
+}

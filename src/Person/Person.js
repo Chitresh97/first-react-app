@@ -3,10 +3,13 @@ import React from 'react'
 //No need to import component because we are not creating class that inherits component class.
 
 //Component is basically a function returning JSX
+
+import './Person.css';
+// importing stylesheet
 const person=(props)=>{
     //one argument is passed by default which is an object containg all properties(attributes of component)
     return (
-    <div>
+    <div className="Person">
         <p>My name is {props.name}, I am {props.age} years old.</p>
         {/* Children property- elements between opening and closing tag of component*/}
         <p>{props.children}</p> 

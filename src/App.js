@@ -29,11 +29,19 @@ class App extends Component {
     })
   }
   render() {
+    const style={
+      // Different format of css because inside JS.
+      backgroundColor: 'green',
+      border: '1px solid blue',
+      padding: '20px'
+    };
     return (
       <div className="App">
         <h1>Hello</h1>
         {/* don;t add brackets in function call otherwise it'll be called as soon as DOM is rendered */}
-        <button onClick={this.switchnameHandler}>Click here</button>
+        <button 
+          style={style} 
+          onClick={this.switchnameHandler}>Click here</button>
         {/* Using the person component, self closing tag */}
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
         {/* Children property- elements between opening and closing tag of component */}

@@ -13,7 +13,8 @@ class App extends Component {
       {name:'Max', age:28},
       {name:'Chitresh', age:21},
       {name:'conman', age:56},
-    ]
+    ],
+    showPersons: false
 
   }
   //handler is used in name of function to indicate it's a event handler. It is just a convention.
@@ -28,6 +29,10 @@ class App extends Component {
       ]
     })
   }
+  togglePersonHandler=()=>{
+    const doesShow=this.state.showPersons;
+    this.setState({showPersons: !doesShow});
+  }
   render() {
     const style={
       // Different format of css because inside JS.
@@ -35,18 +40,28 @@ class App extends Component {
       border: '1px solid blue',
       padding: '20px'
     };
-    return (
-      <div className="App">
-        <h1>Hello</h1>
-        {/* don;t add brackets in function call otherwise it'll be called as soon as DOM is rendered */}
-        <button 
-          style={style} 
-          onClick={this.switchnameHandler}>Click here</button>
+
+    let persons=null;
+    if(this.state.showPersons){
+      persons=(        
+      <div>
         {/* Using the person component, self closing tag */}
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
         {/* Children property- elements between opening and closing tag of component */}
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+      </div>
+      )
+    }
+    return (
+      <div className="App">
+        <h1>Hello</h1>
+        {/* don't add brackets in function call otherwise it'll be called as soon as DOM is rendered */}
+        <button 
+          style={style} 
+          onClick={this.togglePersonHandler}>Click here</button>
+          {persons}
+
       </div>
     );
   }

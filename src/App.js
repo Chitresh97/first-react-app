@@ -46,10 +46,16 @@ class App extends Component {
       persons=(        
       <div>
         {/* Using the person component, self closing tag */}
-        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+        <Person 
+          name={this.state.persons[0].name}
+          age={this.state.persons[0].age}/>
         {/* Children property- elements between opening and closing tag of component */}
-        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
-        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+        <Person 
+          name={this.state.persons[1].name} 
+          age={this.state.persons[1].age}/>
+        <Person  
+          name={this.state.persons[2].name} 
+          age={this.state.persons[2].age}/>
       </div>
       )
     }

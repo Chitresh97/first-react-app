@@ -10,7 +10,7 @@ const person=(props)=>{
     //one argument is passed by default which is an object containg all properties(attributes of component)
     return (
     <div className="Person">
-        <p>My name is {props.name}, I am {props.age} years old.</p>
+        <p onClick={props.click}>My name is {props.name}, I am {props.age} years old.</p>
         {/* Children property- elements between opening and closing tag of component*/}
         <p>{props.children}</p> 
     </div>

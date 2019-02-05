@@ -45,17 +45,24 @@ class App extends Component {
     if(this.state.showPersons){
       persons=(        
       <div>
+        {this.state.persons.map(person=>{
+          return <Person 
+            name={person.name}
+            age={person.age}
+            click={this.switchnameHandler}/>
+
+        })}
         {/* Using the person component, self closing tag */}
-        <Person 
+        {/* <Person 
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}/>
         {/* Children property- elements between opening and closing tag of component */}
-        <Person 
+        {/* <Person 
           name={this.state.persons[1].name} 
           age={this.state.persons[1].age}/>
         <Person  
           name={this.state.persons[2].name} 
-          age={this.state.persons[2].age}/>
+          age={this.state.persons[2].age}/> */} */}
       </div>
       )
     }

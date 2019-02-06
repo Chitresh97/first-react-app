@@ -13,7 +13,7 @@ const person=(props)=>{
         <p onClick={props.click}>My name is {props.name}, I am {props.age} years old.</p>
         {/* Children property- elements between opening and closing tag of component*/}
         <p>{props.children}</p> 
-        <input type="text" onChange={props.changed}/>
+        <input type="text" onChange={props.changed} value={props.name}/>
     </div>
     )
     //content inside {} is executed as JS. It is used to run dynamic content in JSX.

@@ -33,6 +33,15 @@ class App extends Component {
     const doesShow=this.state.showPersons;
     this.setState({showPersons: !doesShow});
   }
+  namechangedHandler=(event)=>{
+    this.setState({
+      persons: [
+        {name:'Maximilian', age:28},
+        {name: event.target.value, age:101},
+        {name:'conman', age:56},
+      ]
+    })
+  }
   render() {
     const style={
       // Different format of css because inside JS.
@@ -49,7 +58,10 @@ class App extends Component {
           return <Person 
             name={person.name}
             age={person.age}
-            click={this.switchnameHandler}/>
+            // click which stores the reference to switchnameHandler is also passed as prop.
+            click={this.switchnameHandler}
+            changed={this.namechangedHandler}/>
+            
 
         })}
         {/* Using the person component, self closing tag */}
@@ -62,7 +74,7 @@ class App extends Component {
           age={this.state.persons[1].age}/>
         <Person  
           name={this.state.persons[2].name} 
-          age={this.state.persons[2].age}/> */} */}
+          age={this.state.persons[2].age}/> */ }
       </div>
       )
     }

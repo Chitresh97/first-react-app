@@ -42,6 +42,9 @@ class App extends Component {
       ]
     })
   }
+  deletepersonHandler=()=>{
+
+  }
   render() {
     const style={
       // Different format of css because inside JS.
@@ -59,11 +62,12 @@ class App extends Component {
             name={person.name}
             age={person.age}
             // click which stores the reference to switchnameHandler is also passed as prop.
-            click={this.switchnameHandler}
+            click={this.deletepersonHandler}
             changed={this.namechangedHandler}/>
             
 
         })}
+
         {/* Using the person component, self closing tag */}
         {/* <Person 
           name={this.state.persons[0].name}
@@ -74,9 +78,13 @@ class App extends Component {
           age={this.state.persons[1].age}/>
         <Person  
           name={this.state.persons[2].name} 
-          age={this.state.persons[2].age}/> */ }
+          age={this.state.persons[2].age}/>  */ }
       </div>
-      )
+      );
+      style.backgroundColor='red';
+
+
+
     }
     return (
       <div className="App">
